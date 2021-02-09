@@ -43,6 +43,16 @@ canvas { position: absolute;}
 .subPfBar .pfContents{width: 85%;}
 .subPfBar .pfContents h3{font-size: 18px; font-weight: 600;}
 .subPfBar .pfContents p{font-size: 16px; font-weight: 300; margin: 0 0 5px;}
-.subPfBar .pfContents b{font-size: 16px; font-weight: 300;}
+.subPfBar .pfContents .rateNum{font-size: 16px; font-weight: 300; width: 25px; text-align: right; border: 0;}
+.subPfBar .pfContents .rateNum:focus{border:  1px solid #aaa;}
+.subPfBar .pfContents p>i{ font-style: normal; font-size: 14px;}
+
 .subPfBar .pfBarBox{padding: 5px 0; border: 1px solid #ccc; border-radius: 10px; background: #eee;}
-.subPfBar .pfBarBox .pfBar{ display:block; width: 0; height: 15px; background: #2a623d; border-radius: 0 10px 10px 0;}
+.subPfBar .pfBarBox .pfBar{ display:block; width: 0; height: 15px; background: #2a623d; border-radius:8px ;}
+
+
+/* button box style */
+
+.btns{display: flex; align-items: center;justify-content: flex-end; padding: 10px;}
+.btns button{border: 1px solid #2a623d; background: #2a623d; color: #fff;  font-weight: 400; font-family: 'Noto Sans KR'; padding: 10px 30px; border-radius: 3px; font-size: 16px;}
+.btns button:nth-child(2){margin: 0 5px;}

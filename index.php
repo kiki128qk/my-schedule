@@ -34,9 +34,25 @@
         </div>
     </header>
    
+    <?php
+    include $_SERVER['DOCUMENT_ROOT']."/my-schedule/include/db_conn.php";
+    $sql="select * from schedule_progress";
+
+    $sch_result=mysqli_query($dbConn, $sql);
+    $sch_row=mysqli_fetch_array($sch_result);
+
+    $sch_db=$sch_row['sch_db'];
+    $sch_api=$sch_row['sch_api'];
+    $sch_ren=$sch_row['sch_ren'];
+    $sch_pla=$sch_row['sch_pla'];
+
+    ?>
+
     <!-- container -->
     <div class="center">
+    <form action="" method="get" name="updateRate">
         <div class="container">
+           
             <div class="item">
                 <section class="graph-circle">
                     <div class="circle-graph-container">
@@ -48,55 +64,63 @@
                     <p class="totalTit">Total Process Rates</p>
                 </section>
             </div>
-            <div class="item subPfBar">
-                <div class="pfImg">
-                    <i class="fa fa-database"></i>
-                </div>
-                <div class="pfContents">
-                    <h3>Database Project</h3>
-                    <p>progress Rate: <b class="rateNum">90</b>% || Last Update : <b>2021-02-09</b></p>
-                    <div class="pfBarBox">
-                        <span class="pfBar"></span>
+         
+                <div class="item subPfBar">
+                    <div class="pfImg">
+                        <i class="fa fa-database"></i>
+                    </div>
+                    <div class="pfContents">
+                        <h3>Database Project</h3>
+                        <p>progress Rate: <input class="rateNum" type="text" value="<?=$sch_db?>"> % || <i> Last Update : <b>2021-02-09</b></i></p>
+                        <div class="pfBarBox">
+                            <span class="pfBar"></span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="item subPfBar">
-                <div class="pfImg">
-                    <i class="fa fa-thermometer-half"></i>
-                </div>
-                <div class="pfContents">
-                    <h3>API Porject</h3>
-                    <p>progress Rate: <b class="rateNum">70</b>% || Last Update : <b>2021-02-09</b></p>
-                    <div class="pfBarBox">
-                        <span class="pfBar"></span>
+                
+                <div class="item subPfBar">
+                    <div class="pfImg">
+                        <i class="fa fa-thermometer-half"></i>
+                    </div>
+                    <div class="pfContents">
+                        <h3>API Porject</h3>
+                        <p>progress Rate: <input class="rateNum" type="text" value="<?=$sch_api?>"> % || <i> Last Update : <b>2021-02-09</b></i></p></p>
+                        <div class="pfBarBox">
+                            <span class="pfBar"></span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="item subPfBar">
-                <div class="pfImg">
-                    <i class="fa fa-clone"></i>
-                </div>
-                <div class="pfContents">
-                    <h3>Renewal Porject</h3>
-                    <p>progress Rate: <b class="rateNum">30</b>% || Last Update : <b>2021-02-09</b></p>
-                    <div class="pfBarBox">
-                        <span class="pfBar"></span>
+                <div class="item subPfBar">
+                    <div class="pfImg">
+                        <i class="fa fa-clone"></i>
+                    </div>
+                    <div class="pfContents">
+                        <h3>Renewal Porject</h3>
+                        <p>progress Rate:<input class="rateNum" type="text" value="<?=$sch_ren?>"> % || <i> Last Update : <b>2021-02-09</b></i></p></p>
+                        <div class="pfBarBox">
+                            <span class="pfBar"></span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="item subPfBar">
-                <div class="pfImg">
-                    <i class="fa fa-bar-chart-o"></i>
-                </div>
-                <div class="pfContents">
-                    <h3>Progress Ratn</h3>
-                    <p>progress Rate: <b class="rateNum">0</b>% || Last Update : <b>2021-02-09</b></p>
-                    <div class="pfBarBox">
-                        <span class="pfBar"></span>
+                <div class="item subPfBar">
+                    <div class="pfImg">
+                        <i class="fa fa-bar-chart-o"></i>
+                    </div>
+                    <div class="pfContents">
+                        <h3>Progress Ratn</h3>
+                        <p>progress Rate: <input class="rateNum" type="text" value="<?=$sch_pla?>"> % || <i> Last Update : <b>2021-02-09</b></i></p></p>
+                        <div class="pfBarBox">
+                            <span class="pfBar"></span>
+                        </div>
                     </div>
                 </div>
+    </form>
+            <div class="item btns">
+                <button type="button">진행률 수정</button>
+                <button type="button">진행 사항 작성</button>
+                <button type="button">진행 사항 확인</button>
+
             </div>
-            <div class="item subPfBar"></div>
         </div>
     </div>
 </div>

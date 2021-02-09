@@ -12,7 +12,10 @@
     .container .item:nth-child(3),
     .container .item:nth-child(4),
     .container .item:nth-child(5){grid-column:1/3;}
-
+    
+    /* Button box style */
+    .btns{justify-content: center;}
+    .btns button{padding: 5px 20px;  font-size:16px;}
 }
 
 @media screen and (max-width:400px){
