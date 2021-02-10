@@ -1,0 +1,1 @@
+type="submit"을 건드리면 왜 form 의 acter을 건드렸는지

@@ -1,11 +1,13 @@
 @media screen and (max-width:980px){
-    .center{padding: 0 15px;}
+    .center{padding: 0 25px;}
+
 }
 
 
 @media screen and (max-width:780px){
 /* conteiner style */
-    .container{grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(9, minmax(100px, auto));
+    .wrap{justify-content: start;}
+    .container{grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(9, minmax(100px, auto)); padding: 20px 0;
     } 
     .container .item:nth-child(1),
     .container .item:nth-child(2),
@@ -16,10 +18,21 @@
     /* Button box style */
     .btns{justify-content: center;}
     .btns button{padding: 5px 20px;  font-size:16px;}
+
+    /* footer style */
+
+    footer{position: relative;}
 }
 
 @media screen and (max-width:400px){
-    .container {grid-template-rows: repeat(9, minmax(70px, auto)); padding: 20px 0 100px;}
+    .container {grid-template-rows: repeat(9, minmax(70px, auto));}
     .circle-graph p {font-size: 18px; font-weight: 400;} 
     .subPfBar .pfImg{font-size: 20px;}
+    /* button style */
+    .btns button{width: 33.33%;}
+
+  /* footer style */
+    footer{padding: 10px 15px;}
+    footer p{font-size: 12px;}
+    header .headerWrap h1{font-size:14px;}
 }

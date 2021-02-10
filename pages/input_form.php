@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule Dashboard</title>
+    <title>Input Dashboard</title>
 
     <!-- awesome Font Link -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -20,12 +20,12 @@
 <body>
 <!-- All contents are wrapped inside wrap class -->
 <div class="wrap">
-    <!-- header -->
+    <!-- header include-->
     <?php
     include $_SERVER["DOCUMENT_ROOT"]."/my-schedule/include/header.php"
     ?>
     
-   
+    <!-- schedule db  include-->
     <?php
     include $_SERVER['DOCUMENT_ROOT']."/my-schedule/include/db_conn.php";
     $sql="select * from schedule_progress";
@@ -43,15 +43,16 @@
     <!-- container -->
     <div class="center">
         <form action="/my-schedule/php/update_rate.php" method="get" name="updateRate">
-            <div class="container">
-            <!-- start item no.1~5 grid_up  -->
+            <div class="inputContainer">
+            <!-- start item no.1~5 grid_up include-->
                 <?php
                     include $_SERVER["DOCUMENT_ROOT"]."/my-schedule/include/grid_up.php"
                 ?>
+                <div class="item"></div>
                 <!--start item no.6  grid_down-->
                 <div class="item btns">
                     <button type="submit">진행률 수정</button>
-                    <button type="button">진행 사항 작성</button>
+                    <button type="button" onclick="javascript:location.href='/my-schedule/pages/input_form.php'">진행 사항 작성</button>
                     <button type="button">진행 사항 확인</button>
                 </div>
             </div>
