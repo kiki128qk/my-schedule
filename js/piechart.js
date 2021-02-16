@@ -1,6 +1,5 @@
 $(function() {
   $(window).ajaxComplete(function(){
-
     let pieSize = 250;
     let liWidth = $(window).width();
     let clear;
@@ -17,7 +16,7 @@ $(function() {
       scaleColor: false,
       lineWidth: 40,
       lineCap: 'butt',
-      barColor: '#2a623d',
+      barColor: 'indigo',
       trackColor: '#cccccc' ,
       size: pieSize,
       animate: 1200
@@ -40,7 +39,7 @@ $(function() {
           scaleColor: false,
           lineWidth: 40,
           lineCap: 'butt',
-          barColor: '#2a623d',
+          barColor: 'indigo',
           trackColor: '#cccccc' ,
           size: pieSize,
           animate: 1

@@ -1,75 +1,64 @@
-
-/* header style */
 /* Header Style */
-header{width:100%; height:auto; background:#2a623d; color:#fff;}
+header{width:100%; height:auto; background:indigo; color:#fff;}
 header .headerWrap{display:flex; align-items:center; justify-content:space-between;}
-header .headerWrap a{color: #fff; font-size: 22px;}
+header .headerWrap a{color:#fff; font-size:22px;}
 header .headerWrap .mIcon{width:30px; height:auto;display:flex; flex-wrap:wrap; justify-content: flex-end; cursor:pointer;}
-/* display: flex로 설정할경우 길이 값은 중요하지 않음 형제의 경우 한줄에 일렬로 배치 */
-/* {display: flex; flex-wrap: wrap; justify-content: flex-end;}으로 메뉴바의 길이 다름을 안쪽으로 배치 */
 header .headerWrap .mIcon span{width:100%; height:2px; background:#fff; display:block;}
-/* header .headerWrap .mIcon span:nth-child(1){} */
+header .headerWrap .mIcon span:nth-child(1){}
 header .headerWrap .mIcon span:nth-child(2){margin:5px 0; width:50%;}
 header .headerWrap .mIcon span:nth-child(3){width:70%;}
 header .headerWrap h1{font-weight:400; font-size:22px; padding:10px 0;}
 
-/* container style */
-.container{width: 100%; height: auto;  display: grid;
-    grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(5, minmax(100px, auto)); gap:5px
-} 
-/* display:grid 의 경우 표처럼 구역을 나눠 설정  */
-/* grid-template-columns: repeat(2, 1fr)  가로로 2개의 셀이 1플로어크기만큼 나눠 자리함*/
-/* grid-template-rows: repeat(5, minmax(100px, auto)) 세로로 5개 셀이 min 100px max auto(세로=스크롤의 높이 따로지정하지 
-않아 서 auto로 지정)로 나누어 자리함 */
+/* Container Style */
+.container{width:100%; height:auto; display:grid;grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(5, minmax(100px, auto)); gap:5px; padding:20px 0;}
+.container .item{background:#fff; border:1px solid #ccc;}
+.container .item:nth-child(1){grid-row-start:1; grid-row-end:5; display:flex; align-items:center; justify-content: center; padding:30px 0;}
+.container .item:nth-child(6){ grid-column-start: 1; grid-column-end: 3;}
 
-.container .item{background:#fff; border:1px solid #aaa;}
-.container .item:nth-child(1){grid-row:1/5; display: flex; align-items: center; justify-content: center; padding: 30px  0;}
-.container .item:nth-child(6){grid-column:1/3;}
+/* Circle Graph Style */
+.graph-circle {position: relative;width:100%; height:100%;display:flex;flex-direction: column;}
+.circle-graph-container {position: relative; display: flex; width:100%;  height:100%;}
+.circle-graph { margin: 0 15px; position: relative; width: 100%; line-height: 1.2 !important; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; display: flex; flex-direction: column; justify-content: center; align-items: center; font-family: 'Roboto', sans-serif; font-weight: 300;}
+canvas {position: absolute;}
+.circle-graph p{font-size:26px; font-weight:600; color:indigo;}
+.totalTit{width:100%; height:auto; text-align:center; font-size:16px; font-weight:400;}
 
-
-/* item 1 circle style */
-.graph-circle {position: relative; width: 100%; height: 100%; display: flex; flex-direction: column;}
-/* flex-direction: column flex로 배치한 요소들을 위에서 아래로 배치 */
-.circle-graph-container {position: relative; display: flex; width:100%; height:100%;}
-.circle-graph {margin: 0 15px;position: relative; width: 100%; line-height: 1.2 !important; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;display: flex;flex-direction: column; justify-content: center;align-items: center; font-family: 'Roboto', sans-serif;font-weight: 300;}
-canvas { position: absolute;}
-/* .circle-graph p {font-size: 20; font-weight: 600; color: #2a623d;} */
-.totalTit{width: 100%; height: auto; text-align: center; font-size: 22px; font-weight: 600;}
-
-
-/* sub portfolio progress Bar style */
-.subPfBar{padding: 10px; display: flex; align-items: center;}
-.subPfBar .pfImg{width: 15%; font-size:28px;  display: flex; align-items: center; justify-content: center;}
-.subPfBar .pfImg i{color: #2a623d;}
-.subPfBar .pfContents{width: 85%;}
-.subPfBar .pfContents h3{font-size: 18px; font-weight: 600;}
-.subPfBar .pfContents p{font-size: 16px; font-weight: 300; margin: 0 0 5px;}
-.subPfBar .pfContents p b{font-weight: normal; font-size: 12px;}
-.subPfBar .pfContents .rateNum{font-size: 16px; font-weight: 300; width: 30px; text-align: right; border: 0; outline: 0;}
-.subPfBar .pfContents .rateNum:focus{border:  1px solid #aaa;}
-/* 완성후 클래스 재 지정 필요.subPfBar .pfContents p>i{ font-style: normal; font-size: 14px;} */
-
-.subPfBar .pfBarBox{padding: 5px 0; border: 1px solid #ccc; border-radius: 10px; background: #eee;}
-.subPfBar .pfBarBox .pfBar{ display:block; width: 0; height: 15px; background: #2a623d; border-radius:8px ;}
-
+/* Sub Portfolio Progress Bar Style */
+.subPfBar{padding:10px; display:flex; align-items:center;}
+.subPfBar .pfImg{width:15%; font-size:28px; display:flex; align-items: center; justify-content: center;}
+.subPfBar .pfImg i{color:indigo;}
+.subPfBar .pfContents{width:85%;}
+.subPfBar .pfContents h3{font-size:14px; font-weight:600;}
+.subPfBar .pfContents p{font-size:12px; font-weight:300; margin:2px 0 5px;}
+.subPfBar .pfContents p b{font-weight:normal; font-size:12px;}
+.subPfBar .pfContents .rateNum{font-weight:300; font-size:12px; width:25px; text-align:right; border:0; outline:0;}
+.subPfBar .pfContents .rateNum:focus{border:1px solid indigo;}
+.subPfBar .pfBarBox{padding:3px 0; border:1px solid #ccc; border-radius:10px; background:#eee;}
+.subPfBar .pfBarBox .pfBar{display:block; width:0; height:15px; background:indigo; border-radius:0 10px 10px 0;}
 
 /* button box style */
+.btns{display:flex; align-items: center; justify-content: flex-end; padding:10px;}
+.btns button{border:1px solid indigo; background:indigo; color:#fff; font-weight:400; font-family:'Noto Sans KR'; padding:10px 30px;}
+.btns button:nth-child(2){margin:0 5px;}
 
-.btns{display: flex; align-items: center;justify-content: flex-end; padding: 10px;}
-.btns button{border: 1px solid #2a623d; background: #2a623d; color: #fff;  font-weight: 400; font-family: 'Noto Sans KR'; padding: 10px 30px; border-radius: 3px; font-size: 16px;}
-.btns button:nth-child(2){margin: 0 5px;}
+/* Footer Style */
+footer{width:100%; height:auto; background:indigo; padding:15px 0; text-align:center; _position:fixed; bottom:0;}
+footer p{color:#fff; font-weight:400;}
 
-/* fooer style */
-footer{width: 100%; height: auto; background:#2a623d; padding: 15px 0 ;text-align: center; position: fixed; bottom: 0;}
-footer p{color: #fff; font-weight: 400;}
+/* Input form Page Style */
+.inputContainer{width:100%; height:auto; display:grid;grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(6, minmax(100px, auto)); gap:5px; padding:20px 0;}
+.inputContainer .item{background:#fff; border:1px solid #ccc;}
+.inputContainer .item:nth-child(1){grid-row-start:1; grid-row-end:5; display:flex; align-items:center; justify-content: center; padding:30px 0;}
 
+.inputContainer .item:nth-child(6){ grid-column-start: 1; grid-column-end: 3;}
+.inputContainer .item:nth-child(7){ grid-column-start: 1; grid-column-end: 3;}
 
-/* inputForm page style */
+.inputContainer .subPfBar .pfContents .rateNum:focus{border:0;}
 
-.inputContainer{width: 100%; height: auto;  display: grid;
-    grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(6, minmax(100px, auto)); gap:5px}
-.inputContainer .item{background:#fff; border:1px solid #aaa;}
-.inputContainer .item:nth-child(1){grid-row:1/5; display: flex; align-items: center; justify-content: center; padding: 30px  0;}
-.inputContainer .item:nth-child(6){grid-column:1/3;}
-.inputContainer .item:nth-child(7){grid-column:1/3;}
-.inputContainer .subPfBar .pfContents .rateNum:focus{border: 0;background:none;}
+/* Input Form Style */
+.item.inputBox{padding:10px;}
+.item.inputBox .projectCate{width:30%; height:40px; border:1px solid #ccc; border-radius:0; outline:0; padding:5px; display:block; float:left; font-family:'Open Sans';}
+.item.inputBox .projectTit{width:calc(70% - 5px); height:40px; padding:5px; border:1px solid #ccc; display:block; float:right; font-family:'Noto Sans KR';}
+.item.inputBox .projectCon{width:100%; height:150px; border:1px solid #ccc; resize:none; padding:5px; margin-top:5px; font-family:'Noto Sans KR';}
+.item.inputBox .projectTit:focus{border:1px solid indigo;}
+.item.inputBox .projectCon:focus{border:1px solid indigo;}
