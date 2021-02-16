@@ -8,7 +8,7 @@
 
   //echo $sch_db, $sch_api, $sch_ren, $sch_pla;
 
-  include $_SERVER['DOCUMENT_ROOT']."/myschedule/include/db_conn.php";
+  include $_SERVER['DOCUMENT_ROOT']."/my-schedule/include/db_conn.php";
   $sql="update schedule_progress set sch_db=$sch_db, sch_api=$sch_api, sch_ren=$sch_ren, sch_pla=$sch_pla where sch_num=$sch_num";
 
   mysqli_query($dbConn, $sql);
@@ -27,12 +27,12 @@
     ));
   }
 
-  file_put_contents($_SERVER['DOCUMENT_ROOT'].'/myschedule/data/sch_rate.json', json_encode($arr, JSON_PRETTY_PRINT));
+  file_put_contents($_SERVER['DOCUMENT_ROOT'].'/my-schedule/data/sch_rate.json', json_encode($arr, JSON_PRETTY_PRINT));
 
   echo "
     <script>
       alert('수정이 완료되었습니다!');
-      location.href='/myschedule/index.php';
+      location.href='/my-schedule/index.php';
     </script>
   ";
 

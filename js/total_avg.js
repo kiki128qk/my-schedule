@@ -1,7 +1,7 @@
 $(function(){
 
   $.ajax({
-    url : '/myschedule/data/sch_rate.json',
+    url : '/my-schedule/data/sch_rate.json',
     success : function(result){
       let apiRate = Number(result[0].api_rate);
       let dbRate = Number(result[0].db_rate);

@@ -30,6 +30,12 @@
   .item.inputBox .projectCate{font-size:12px; width:100%;}
   .item.inputBox .projectTit{font-size:12px; width:100%; margin-top:5px;}
   .item.inputBox .projectCon{font-size:12px;}
+
+  /* schedule Board page style */
+  .item.boardBox .boardTable span.boNum{display: none;}
+  .item.boardBox .boardTable span.boReg{width:30%;
+  }
+  .categoryTabs{text-align: center;}
 }
 
 @media screen and (max-width:400px){
@@ -47,4 +53,9 @@
   /* Footer Style */
   footer{padding:10px 15px;}
   footer p{font-size:12px;}
+
+  /* schedule Board page style */
+  .item.boardBox .boardTable span.boCate{display: none;}
+  .item.boardBox .boardTable span.boTit{width:60%;}
+  .item.boardBox .boardTable span.boReg{width:40%;}
 }
