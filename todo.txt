@@ -1,1 +1,2 @@
-latest_date.php 리펙토링 작업
+1. latest_date.php 리펙토링 작업
+2. 테이블 데이터가 비었을때 처리(날짜 포함)

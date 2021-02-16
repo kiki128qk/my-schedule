@@ -46,11 +46,10 @@
         ?>
 
         <div class="item boardBox">
-        <?php
-
-        $include_path=$_GET['key'];
-        include $_SERVER["DOCUMENT_ROOT"]."/my-schedule/include/$include_path.php>"; 
-        ?>     
+          <?php
+          $include_path=$_GET['key'];
+          include $_SERVER["DOCUMENT_ROOT"]."/my-schedule/include/$include_path.php";
+          ?>
         </div>
 
         <div class="item btns">
@@ -74,11 +73,12 @@
   <script src="/my-schedule/js/custom.js"></script>
   <script src="/my-schedule/js/total_avg.js"></script>
   <script>
-      $(".boardList").hide();
-      $(".boardList").slice(0,5).show();
-      $(".loadMore button").click(function(){
-          $(".boardList:hidden").slice(0,5).show();
-      });
+  $(".boardList").hide();
+  $(".boardList").slice(0, 5).show();
+
+  $(".loadMore button").click(function() {
+    $(".boardList:hidden").slice(0, 5).show();
+  });
   </script>
 </body>
 

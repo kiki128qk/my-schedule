@@ -15,5 +15,7 @@ if (pathname.includes('input_form')) {
 
 } else if (pathname.includes('sch_view')) {
   changeTit.innerHTML = "Schedule Board";
+} else if (pathname.includes('detail_view')) {
+  changeTit.innerHTML = "Detail Schedule";
 }
 </script>

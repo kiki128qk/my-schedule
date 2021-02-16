@@ -50,7 +50,8 @@
             <button type="submit">진행률 수정</button>
             <button type="button" onclick="javascript:location.href='/my-schedule/pages/input_form.php'">진행 상황
               작성</button>
-            <button type="button" onclick="javascript:location.href='/my-schedule/pages/sch_view.php?key=view_all'">진행 상황 확인</button>
+            <button type="button" onclick="javascript:location.href='/my-schedule/pages/sch_view.php?key=view_all'">진행 상황
+              확인</button>
           </div>
         </div>
         <!-- end of container -->
