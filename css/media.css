@@ -1,5 +1,6 @@
 @media screen and (max-width:980px){
   .center{padding:0 25px;}
+  .hiddenHeader{right: 25px;}
 }
 
 @media screen and (max-width:780px){
@@ -20,7 +21,7 @@
 
   /* Button Box Style */
   .btns{justify-content: center;}
-  .btns button, .btns a{padding:5px 20px; font-size:12px; }
+  .btns button, .btns a,.loadMore button, .subBtn button{padding:5px 20px; font-size:12px; }
 
   /* Footer Style */
   footer{position:relative;}
@@ -45,9 +46,15 @@
 
   /* Detail View Page Style */
   .item.viewBox .viewTable span.boNum{display:none;}
+  .item.viewBox .viewTable span.boCate{display:none;}
   .item.viewBox .viewTable span.boReg{width:30%;}
+  .item.viewBox .viewTable span.boCon{width:70%;}
 
   .item.viewBox .detailTit h2{font-size:14px;}
+
+  /* hidden input style */
+.hiddenTit{width: 100%; font-size: 12px;}
+.hiddenCon{width: 100%; font-size: 12px;}
 }
 
 @media screen and (max-width:400px){
@@ -73,6 +80,10 @@
 
   /* Detail View Page Style */
   .item.viewBox .viewTable span.boCate{display:none;}
-  .item.viewBox .viewTable span.boCon{width:60%;}
-  .item.viewBox .viewTable span.boReg{width:40%;}
+  .item.viewBox .viewTable span.boCon{width:70%;}
+  .item.viewBox .viewTable span.boReg{width:30%;}
+
+  /* hidden input style */
+.hiddenTit{outline: 0; border: 1px solid #ccc; padding: 5px; width: 50%; font-family: 'Noto Sans KR';}
+.hiddenCon{width: 100%; height: auto;padding: 5px;font-family: 'Noto Sans KR'; border: 1px solid #ccc; outline:0; resize: none;}
 }

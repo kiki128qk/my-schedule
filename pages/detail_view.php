@@ -61,32 +61,40 @@
               $bo_reg = $board_row['sch_txt_reg'];
               $bo_con = $board_row['sch_txt_con'];
             ?>
+          <form action="/my-schedule/php/detail_update.php?num=<?=$bo_num?>" method="post">
+            <div class="detailTit">
+              <h2><?=$bo_tit?></h2>
+              <input type="text" value="<?=$bo_tit?>" class="hiddenTit" name="updateTit">
+            </div>
 
-          <div class="detailTit">
-            <h2><?=$bo_tit?></h2>
-          </div>
-
-          <ul class="viewTable">
-            <li class="viewTitle">
-              <span class="boNum">번호</span>
-              <span class="boCate">종류</span>
-              <span class="boCon">내용</span>
-              <span class="boReg">작성일</span>
-            </li>
-            <li class="viewList">
-              <span class="boNum"><?=$bo_num?></span>
-              <span class="boCate"><?=$bo_cate?></span>
-              <span class="boCon"><em><?=$bo_con?></em></span>
-              <span class="boReg"><?=$bo_reg?></span>
-            </li>
-            <?php
+            <ul class="viewTable">
+              <li class="viewTitle">
+                <span class="boNum">번호</span>
+                <span class="boCate">종류</span>
+                <span class="boCon">내용</span>
+                <span class="boReg">작성일</span>
+              </li>
+              <li class="viewList">
+                <span class="boNum"><?=$bo_num?></span>
+                <span class="boCate"><?=$bo_cate?></span>
+                <span class="boCon">
+                  <em><?=$bo_con?></em>
+                  <textarea class="hiddenCon" name="updateCon"><?=$bo_con?></textarea>
+                </span>
+                <span class="boReg"><?=$bo_reg?></span>
+              </li>
+              <?php
             }
             ?>
-          </ul>
+            </ul>
+            <div class="subBtn">
+              <button type="submit">수정 사항 입력</button>
+            </div>
+          </form>
         </div>
 
         <div class="item btns">
-          <button type="button">진행 상황 수정</button>
+          <button type="button" class="updateConBtn">진행 상황 수정</button>
           <button type="button" onclick="confirmDel()">진행 상황 삭제</button>
           <a href="/my-schedule/pages/sch_view.php?key=view_all" class="schInput">진행 상황 확인</a>
         </div>
