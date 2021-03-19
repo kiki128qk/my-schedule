@@ -11,7 +11,7 @@ ol, ul{list-style:none;}
 a{text-decoration: none; color:#111;}
 img{display:block;}
 button, input, textarea{outline:0; font-family:'Open Sans';-webkit-appearance: none;}
-input[type="checkbox"]{-webkit-appearance: auto; border-radius:0; border:1px solid #2a632b;}
+input[type="checkbox"]{-webkit-appearance: auto; border-radius:0; border:1px solid indigo;}
 input::placeholder, textarea::placeholder{color:#555;}
 /* input:focus, textarea:focus{background:#f8f8f8;} */
 

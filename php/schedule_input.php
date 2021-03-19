@@ -13,7 +13,7 @@
 
   //echo $projectCate, $projectTit, $projectCon, $regDate;
 
-  include $_SERVER['DOCUMENT_ROOT']."/my-schedule/include/db_conn.php";
+  include $_SERVER['DOCUMENT_ROOT']."/myschedule/include/db_conn.php";
   $sql = "insert into sch_txt(sch_txt_cate, sch_txt_tit, sch_txt_con, sch_txt_reg) values('$projectCate', '$projectTit', '$projectCon', '$regDate')";
 
   mysqli_query($dbConn, $sql);
@@ -21,7 +21,7 @@
   echo "
     <script>
       alert('작성이 완료되었습니다!');
-      location.href='/my-schedule/pages/input_form.php';
+      location.href='/myschedule/pages/input_form.php';
     </script>
   ";
 ?>

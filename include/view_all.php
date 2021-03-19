@@ -1,9 +1,9 @@
 <div class="categoryTabs">
-  <a href="/my-schedule/pages/sch_view.php?key=view_all" class="active"> All</a>
-  <a href="/my-schedule/pages/sch_view.php?key=view_db">Database</a>
-  <a href="/my-schedule/pages/sch_view.php?key=view_api">API</a>
-  <a href="/my-schedule/pages/sch_view.php?key=view_renewal">Renewal</a>
-  <a href="/my-schedule/pages/sch_view.php?key=view_web">Web Planning</a>
+  <a href="/myschedule/pages/sch_view.php?key=view_all" class="active"> All</a>
+  <a href="/myschedule/pages/sch_view.php?key=view_db">Database</a>
+  <a href="/myschedule/pages/sch_view.php?key=view_api">API</a>
+  <a href="/myschedule/pages/sch_view.php?key=view_renewal">Renewal</a>
+  <a href="/myschedule/pages/sch_view.php?key=view_web">Web Planning</a>
 </div>
 <ul class="boardTable">
   <li class="boardTitle">
@@ -14,7 +14,7 @@
   </li>
 
   <?php
-            include $_SERVER['DOCUMENT_ROOT']."/my-schedule/include/db_conn.php";
+            include $_SERVER['DOCUMENT_ROOT']."/myschedule/include/db_conn.php";
             $sql = "select * from sch_txt order by sch_txt_num desc";
             $board_result = mysqli_query($dbConn, $sql);
             if(!$board_result){
@@ -33,7 +33,7 @@
   <li class="boardList">
     <span class="boNum"><?=$bo_num?></span>
     <span class="boCate"><?=$bo_cate?></span>
-    <span class="boTit"><a href="/my-schedule/pages/detail_view.php?num=<?=$bo_num?>"><?=$bo_tit?></a></span>
+    <span class="boTit"><a href="/myschedule/pages/detail_view.php?num=<?=$bo_num?>"><?=$bo_tit?></a></span>
     <span class="boReg"><?=$bo_reg?></span>
   </li>
   <?php

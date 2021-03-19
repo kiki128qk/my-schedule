@@ -11,21 +11,21 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
   <!-- CSS Style Link -->
-  <link rel="stylesheet" href="/my-schedule/css/reset.css" />
-  <link rel="stylesheet" href="/my-schedule/css/style.css" />
-  <link rel="stylesheet" href="/my-schedule/css/media.css" />
+  <link rel="stylesheet" href="/myschedule/css/reset.css" />
+  <link rel="stylesheet" href="/myschedule/css/style.css" />
+  <link rel="stylesheet" href="/myschedule/css/media.css" />
 </head>
 
 <body>
   <!-- All Contents are wrapped inside wrap class -->
   <div class="wrap">
     <!-- header -->
-    <?php include $_SERVER["DOCUMENT_ROOT"]."/my-schedule/include/header.php"; ?>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/myschedule/include/header.php"; ?>
 
     <?php
       $detail_num=$_GET['num'];
 
-      include $_SERVER['DOCUMENT_ROOT']."/my-schedule/include/db_conn.php";
+      include $_SERVER['DOCUMENT_ROOT']."/myschedule/include/db_conn.php";
       $sql="select * from schedule_progress";
 
       $sch_result=mysqli_query($dbConn, $sql);
@@ -43,14 +43,14 @@
 
         <!-- total and each projects progress -->
         <?php
-          include $_SERVER["DOCUMENT_ROOT"]."/my-schedule/include/latest_date.php";
-          include $_SERVER["DOCUMENT_ROOT"]."/my-schedule/include/grid_up.php"; 
+          include $_SERVER["DOCUMENT_ROOT"]."/myschedule/include/latest_date.php";
+          include $_SERVER["DOCUMENT_ROOT"]."/myschedule/include/grid_up.php"; 
         ?>
 
         <div class="item viewBox">
 
           <?php
-            include $_SERVER['DOCUMENT_ROOT']."/my-schedule/include/db_conn.php";
+            include $_SERVER['DOCUMENT_ROOT']."/myschedule/include/db_conn.php";
             $sql = "select * from sch_txt where sch_txt_num = $detail_num";
             $board_result = mysqli_query($dbConn, $sql);
 
@@ -61,7 +61,7 @@
               $bo_reg = $board_row['sch_txt_reg'];
               $bo_con = $board_row['sch_txt_con'];
             ?>
-          <form action="/my-schedule/php/detail_update.php?num=<?=$bo_num?>" method="post">
+          <form action="/myschedule/php/detail_update.php?num=<?=$bo_num?>" method="post">
             <div class="detailTit">
               <h2><?=$bo_tit?></h2>
               <input type="text" value="<?=$bo_tit?>" class="hiddenTit" name="updateTit">
@@ -96,7 +96,7 @@
         <div class="item btns">
           <button type="button" class="updateConBtn">진행 상황 수정</button>
           <button type="button" onclick="confirmDel()">진행 상황 삭제</button>
-          <a href="/my-schedule/pages/sch_view.php?key=view_all" class="schInput">진행 상황 확인</a>
+          <a href="/myschedule/pages/sch_view.php?key=view_all" class="schInput">진행 상황 확인</a>
         </div>
 
       </div>
@@ -105,23 +105,23 @@
     <!-- end of center -->
 
     <!-- Footer -->
-    <?php include $_SERVER["DOCUMENT_ROOT"]."/my-schedule/include/footer.php"; ?>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/myschedule/include/footer.php"; ?>
   </div>
   <!-- end of wrap -->
 
   <!-- script files load -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
-  <script src="/my-schedule/js/piechart.js"></script>
-  <script src="/my-schedule/js/custom.js"></script>
-  <script src="/my-schedule/js/total_avg.js"></script>
+  <script src="/myschedule/js/piechart.js"></script>
+  <script src="/myschedule/js/custom.js"></script>
+  <script src="/myschedule/js/total_avg.js"></script>
   <script>
   function confirmDel() {
     let isCheck = confirm('정말로 삭제 하시겠습니까?');
     if (isCheck == false) {
       return false;
     } else {
-      location.href = '/my-schedule/php/detail_delete.php?num=<?=$bo_num?>';
+      location.href = '/myschedule/php/detail_delete.php?num=<?=$bo_num?>';
     }
   }
   </script>

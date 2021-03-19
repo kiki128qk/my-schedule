@@ -16,7 +16,7 @@ $(function() {
       scaleColor: false,
       lineWidth: 40,
       lineCap: 'butt',
-      barColor: '#2a632b',
+      barColor: 'indigo',
       trackColor: '#cccccc' ,
       size: pieSize,
       animate: 1200
@@ -39,7 +39,7 @@ $(function() {
           scaleColor: false,
           lineWidth: 40,
           lineCap: 'butt',
-          barColor: '#2a632b',
+          barColor: 'indigo',
           trackColor: '#cccccc' ,
           size: pieSize,
           animate: 1

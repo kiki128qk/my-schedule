@@ -5,7 +5,7 @@
 
   echo "
     <script>
-      location.href='/my-schedule/index.php';
+      location.href='/myschedule/index.php';
     </script>
   ";
 
